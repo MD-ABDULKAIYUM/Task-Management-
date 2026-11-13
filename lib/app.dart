@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_managment/presentation/Splash/splash_page.dart';
 class MYapp extends StatelessWidget {
   const MYapp({super.key});
 
@@ -10,7 +11,7 @@ class MYapp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
       ),
       title: 'task_managment',
-      home: ,
+      home: splash_page(),
 
     );
   }
