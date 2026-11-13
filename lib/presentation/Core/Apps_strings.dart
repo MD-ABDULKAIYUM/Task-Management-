@@ -3,6 +3,7 @@
 class AppStrings {
   // App Name
   static const String appName = "Taskly";
+  static const String appTagline ="Plan Your day,simply";
 
   // Common
   static const String save = "Save";
