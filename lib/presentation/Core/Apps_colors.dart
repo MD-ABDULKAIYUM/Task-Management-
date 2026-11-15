@@ -1,38 +1,42 @@
-
 import 'package:flutter/material.dart';
 
 class AppColors {
+  AppColors._();
 
-  // Primary Colors
-  static const Color primary = Color(0xFF5F5DE7);
-  static const Color primaryDark = Color(0xFF403E78);
-  static const Color primaryLight = Color(0xFFECEBFF);
+// Brand color (buttons, logo, highlights)
+  static const Color primary = Color(0xFF5B5FEF);
+  static const Color primaryLight = Color(0xFFEEEFFE);
 
-  // Background Colors
-  static const Color background = Color(0xFFF6F8FA);
+// Backgrounds
+  static const Color background = Color(0xFFF7F8FB);
   static const Color white = Color(0xFFFFFFFF);
-  static const Color surface = Color(0xFFF8F8FA);
+  static const Color softGrey = Color(0xFFEFF0F4);
+  static const Color iconBox = Color(0xFFF3F4F7);
+  static const Color buttonActiveBg = Color(0xFFE4E5E9);
 
-  // Text Colors
-  static const Color textPrimary = Color(0xFF171717);
-  static const Color textSecondary = Color(0xFF777777);
-  static const Color textLight = Color(0xFFAAAAAA);
+// Text
+  static const Color primaryText = Color(0xFF15181E);
+  static const Color bodyText = Color(0xFF4B5563);
+  static const Color secondaryText = Color(0xFF6B7280);
+  static const Color labelText = Color(0xFF8A909B);
+  static const Color mutedText = Color(0xFF9AA1AC);
 
-  // Border Colors
-  static const Color border = Color(0xFFE8E8EE);
-  static const Color divider = Color(0xFFF0F0F3);
+// Lines
+  static const Color border = Color.fromARGB(255, 210, 211, 215);
+  static const Color divider = Color(0xFFF0F1F4);
 
-  // Status Colors
-  static const Color success = Color(0xFF48A889);
-  static const Color successLight = Color(0xFFE8F6F0);
+// Green (completed / low priority)
+  static const Color green = Color(0xFF0E9F6E);
+  static const Color greenLight = Color(0xFFE8F9F2);
+  static const Color greenIcon = Color(0xFF10B981);
 
-  static const Color warning = Color(0xFFE8B75B);
-  static const Color warningLight = Color(0xFFFFF5E5);
+// Amber (medium priority / pending icon)
+  static const Color amber = Color(0xFFB45309);
+  static const Color amberLight = Color(0xFFFEF6E7);
+  static const Color amberIcon = Color(0xFFF59E0B);
 
-  static const Color error = Color(0xFFE4777D);
-  static const Color errorLight = Color(0xFFFFEEEE);
-
-  static const Color info = Color(0xFF7B91D8);
-  static const Color infoLight = Color(0xFFEEF1FF);
-
+// Red (high priority / delete)
+  static const Color red = Color(0xFFDC2626);
+  static const Color redLight = Color(0xFFFDEDED);
+  static const Color redBorder = Color(0xFFFBD5D5);
 }

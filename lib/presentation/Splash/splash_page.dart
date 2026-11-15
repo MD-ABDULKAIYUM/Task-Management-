@@ -43,7 +43,7 @@ class _splash_pageState extends State<splash_page> {
                 color: AppColors.primary,
                 borderRadius: BorderRadius.circular(20),
                 boxShadow:[
-                  BoxShadow(color: AppColors.textSecondary,offset: Offset(0, 2),blurRadius: 0.9),
+                  BoxShadow(color: AppColors.secondaryText,offset: Offset(0, 2),blurRadius: 0.9),
 
                 ]
             

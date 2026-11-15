@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:task_managment/presentation/Core/Apps_colors.dart';
 import 'package:task_managment/presentation/Core/Apps_strings.dart';
+import 'package:task_managment/presentation/home/Widget/app_logo.dart';
+import 'package:task_managment/presentation/home/Widget/start_card.dart';
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -19,15 +21,8 @@ class _HomePageState extends State<HomePage> {
           child: Row(
             spacing: 8,
             children: [
-              Container(
-                height: 30,
-                width: 30,
-                decoration: BoxDecoration(
-                  color: AppColors.primary,
-                  borderRadius: BorderRadius.circular(10)
-                ),
-                child: Icon(Icons.check,color: AppColors.background,),
-              ),
+              AppLogo(),
+
               Text(AppStrings.appName)
               
             ],
@@ -59,7 +54,7 @@ class _HomePageState extends State<HomePage> {
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
-                color:AppColors.textSecondary
+                color:AppColors.primaryText
               ),
             ),
            Text(
@@ -67,42 +62,15 @@ class _HomePageState extends State<HomePage> {
              fontSize: 30
            ),
            ),
-            Container(
+           Row(
+             spacing: 10,
+             children: [
+               Expanded(child: StartCard()),
+               Expanded(child: StartCard()),
+               Expanded(child: StartCard()),
+             ],
+           )
 
-              width:120,
-
-              decoration: BoxDecoration(
-                color: AppColors.background,
-                borderRadius: BorderRadius.circular(20),
-                  boxShadow:[
-                    // BoxShadow(color: AppColors.textSecondary,offset: Offset(0, 2),blurRadius: 0.9),
-                    BoxShadow(color: AppColors.textSecondary,offset: Offset(0, 2),blurRadius: 0.9)
-
-                  ]
-              ),
-              child: Padding(
-                padding: EdgeInsets.all(7.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Icon(Icons.task,color: AppColors.primary,),
-                    Text('10',style: TextStyle(
-                      fontSize: 25 ,
-                      fontWeight: FontWeight.w400,
-                      
-                    ),),
-                    Text(
-                      AppStrings.total,
-                      style: TextStyle(
-                        fontSize: 20 ,
-                        color: AppColors.textSecondary
-                      ),
-                    )
-                    
-                  ],
-                ),
-              ),
-            )
         
           ],
         
