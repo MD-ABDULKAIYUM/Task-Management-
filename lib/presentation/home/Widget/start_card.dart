@@ -3,13 +3,20 @@ import 'package:flutter/material.dart';
 import '../../Core/Apps_colors.dart';
 import '../../Core/Apps_strings.dart';
 class StartCard extends StatelessWidget {
-  const StartCard({super.key});
+  final IconData icon;
+  final Color iconColor ;
+  final int count;
+  final String Level;
+
+  const new({super.key, required this.icon, required this.iconColor, required this.count, required this.Level});
+
+  // const StartCard({super.key});
 
   @override
   Widget build(BuildContext context) {
     return  Container(
 
-      width:120,
+      width:125,
 
       decoration: BoxDecoration(
           color: AppColors.background,
@@ -25,16 +32,16 @@ class StartCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Icon(Icons.task,color: AppColors.primary,),
-            Text('10',style: TextStyle(
+            Icon(icon,color: AppColors.primary,),
+            Text(count.toString(),style: TextStyle(
               fontSize: 25 ,
               fontWeight: FontWeight.w400,
 
             ),),
             Text(
-              AppStrings.total,
+              Level,
               style: TextStyle(
-                  fontSize: 20 ,
+                  fontSize: 18 ,
                   color: AppColors.secondaryText
               ),
             )

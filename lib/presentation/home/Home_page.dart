@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> {
       ),
 
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: EdgeInsets.symmetric(horizontal: 16,vertical: 5),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -59,15 +59,25 @@ class _HomePageState extends State<HomePage> {
             ),
            Text(
              "Kaiyum",style: TextStyle(
-             fontSize: 30
+             fontSize: 25
            ),
            ),
            Row(
              spacing: 10,
              children: [
-               Expanded(child: StartCard()),
-               Expanded(child: StartCard()),
-               Expanded(child: StartCard()),
+               Expanded(child: StartCard(icon: Icons.add,
+                 iconColor: AppColors.secondaryText,
+                 count: 0,
+                 Level: "Total",)),
+               Expanded(child: StartCard(icon: Icons.add,
+                 iconColor: AppColors.secondaryText,
+                 count: 0,
+                 Level: "Pending",)),
+               Expanded(child: StartCard(icon: Icons.add,
+                 iconColor: AppColors.secondaryText,
+                 count: 0,
+                 Level: "Completed",)),
+
              ],
            )
 
