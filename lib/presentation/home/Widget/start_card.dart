@@ -15,11 +15,10 @@ class StartCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-
-      width:125,
+      padding: EdgeInsets.symmetric(horizontal: 10,vertical: 12),
 
       decoration: BoxDecoration(
-          color: AppColors.background,
+          color: AppColors.white ,
           borderRadius: BorderRadius.circular(20),
           boxShadow:[
             // BoxShadow(color: AppColors.textSecondary,offset: Offset(0, 2),blurRadius: 0.9),
@@ -27,27 +26,26 @@ class StartCard extends StatelessWidget {
 
           ]
       ),
-      child: Padding(
-        padding: EdgeInsets.all(7.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Icon(icon,color: AppColors.primary,),
-            Text(count.toString(),style: TextStyle(
-              fontSize: 25 ,
-              fontWeight: FontWeight.w400,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Icon(icon,color:iconColor ),
+          Text(count.toString(),style: TextStyle(
+            fontSize: 25 ,
+            fontWeight: FontWeight.w400,
 
-            ),),
-            Text(
-              Level,
-              style: TextStyle(
-                  fontSize: 18 ,
-                  color: AppColors.secondaryText
-              ),
-            )
+          ),),
+          Text(
+            Level,
+            style: TextStyle(
+                fontSize: 18 ,
+                color: AppColors.mutedText,
+              fontWeight: FontWeight.w600
 
-          ],
-        ),
+            ),
+          )
+
+        ],
       ),
     );
   }

@@ -3,6 +3,9 @@ import 'package:task_managment/presentation/Core/Apps_colors.dart';
 import 'package:task_managment/presentation/Core/Apps_strings.dart';
 import 'package:task_managment/presentation/home/Widget/app_logo.dart';
 import 'package:task_managment/presentation/home/Widget/start_card.dart';
+
+import 'Widget/filtter_button.dart';
+import 'Widget/task_card.dart';
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -65,21 +68,43 @@ class _HomePageState extends State<HomePage> {
            Row(
              spacing: 10,
              children: [
-               Expanded(child: StartCard(icon: Icons.add,
-                 iconColor: AppColors.secondaryText,
+               Expanded(child: StartCard(icon: Icons.format_list_bulleted,
+                 iconColor: AppColors.primary,
                  count: 0,
                  Level: "Total",)),
-               Expanded(child: StartCard(icon: Icons.add,
-                 iconColor: AppColors.secondaryText,
+               Expanded(child: StartCard(icon: Icons.schedule_outlined,
+                 iconColor: AppColors.amberIcon,
                  count: 0,
                  Level: "Pending",)),
-               Expanded(child: StartCard(icon: Icons.add,
-                 iconColor: AppColors.secondaryText,
+               Expanded(child: StartCard(icon: Icons.check_circle_outline,
+                 iconColor: AppColors.greenIcon,
                  count: 0,
                  Level: "Completed",)),
 
              ],
-           )
+
+           ),
+            SizedBox(height: 10,),
+            Row(
+              spacing: 10,
+              children: [
+                Expanded(child: FiltterButton(
+                  lebel: 'All',
+                  isSelected: true,
+                )),
+                Expanded(child: FiltterButton(
+                  lebel: 'Pending',
+                  isSelected: false,
+                )),
+                Expanded(child: FiltterButton(
+                  lebel: 'Completed',
+                  isSelected: false,
+                )),
+
+
+              ],
+            ),
+            TaskCard(),
 
         
           ],
