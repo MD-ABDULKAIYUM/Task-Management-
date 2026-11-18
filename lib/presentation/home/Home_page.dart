@@ -4,6 +4,7 @@ import 'package:task_managment/presentation/Core/Apps_strings.dart';
 import 'package:task_managment/presentation/home/Widget/app_logo.dart';
 import 'package:task_managment/presentation/home/Widget/start_card.dart';
 
+import '../Core/task.dart';
 import 'Widget/filtter_button.dart';
 import 'Widget/task_card.dart';
 class HomePage extends StatefulWidget {
@@ -104,7 +105,17 @@ class _HomePageState extends State<HomePage> {
 
               ],
             ),
-            TaskCard(),
+            TaskCard(task: Task(
+                title:'Finishing onboarding flow mockups ',
+                description : 'Call the clinic and schedule a cleaning',
+                dueDate: 'Nov 4',
+                priority:'High',
+                createdDate:'Nov 1',
+                isCompleted: false,
+            ),
+              onTab: (){},
+              onstatuseTab: (){}
+            ),
 
         
           ],
