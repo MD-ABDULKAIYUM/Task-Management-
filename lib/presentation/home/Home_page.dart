@@ -51,6 +51,8 @@ class _HomePageState extends State<HomePage> {
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 16,vertical: 5),
         child: Column(
+          spacing: 4,
+
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
@@ -85,7 +87,7 @@ class _HomePageState extends State<HomePage> {
              ],
 
            ),
-            SizedBox(height: 10,),
+
             Row(
               spacing: 10,
               children: [
@@ -116,12 +118,38 @@ class _HomePageState extends State<HomePage> {
               onTab: (){},
               onstatuseTab: (){}
             ),
+            TaskCard(task: Task(
+              title:'Finishing onboarding flow mockups ',
+              description : 'Call the clinic and schedule a cleaning',
+              dueDate: 'Nov 4',
+              priority:'High',
+              createdDate:'Nov 1',
+              isCompleted: false,
+            ),
+                onTab: (){},
+                onstatuseTab: (){}
+            ),
+            TaskCard(task: Task(
+              title:'Finishing onboarding flow mockups ',
+              description : 'Call the clinic and schedule a cleaning',
+              dueDate: 'Nov 4',
+              priority:'High',
+              createdDate:'Nov 1',
+              isCompleted: false,
+            ),
+                onTab: (){},
+                onstatuseTab: (){}
+            ),
 
         
           ],
         
         ),
       ),
+      floatingActionButton: FloatingActionButton(onPressed: (){}
+      ,backgroundColor: AppColors.primary,
+      child: Icon(Icons.add,color: Colors.white,),),
+      
     );
   }
 }

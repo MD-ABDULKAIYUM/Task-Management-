@@ -13,7 +13,7 @@ class Task {
     required this.createdDate,
     this.isCompleted = false,}
       );
-  List<Task> x =[
+  static final List<Task> x =[
     Task(
   title:'Finishing onboarding flow mockups ',
   description : 'Call the clinic and schedule a cleaning',
